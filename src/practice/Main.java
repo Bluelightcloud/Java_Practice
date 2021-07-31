@@ -200,8 +200,8 @@ public class Main {
 		Management m = new Manager(num, p1, a1, tel, mail);
 		m.manage();
 		
-		ReadFile.readFile("C:/Users/浜松　翔大/Desktop/index.php");
-		WriteFile.writeFile("C:/Users/浜松　翔大/Desktop/test.txt");
+		ReadFile.readFile("C:/Users/hoge/Desktop/index.php");
+		WriteFile.writeFile("C:/Users/hoge/Desktop/test.txt");
 	}
 	    
 }
