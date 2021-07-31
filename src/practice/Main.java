@@ -1,9 +1,11 @@
 package practice;
-
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
+
+import readfile.ReadFile;
+import writefile.WriteFile;
 
 
 interface Management{
@@ -198,6 +200,8 @@ public class Main {
 		Management m = new Manager(num, p1, a1, tel, mail);
 		m.manage();
 		
+		ReadFile.readFile("C:/Users/浜松　翔大/Desktop/index.php");
+		WriteFile.writeFile("C:/Users/浜松　翔大/Desktop/test.txt");
 	}
 	    
 }
