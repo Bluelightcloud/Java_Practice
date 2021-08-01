@@ -3,6 +3,7 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
+import java.time.format.DateTimeParseException;
 
 import readfile.ReadFile;
 import writefile.WriteFile;
@@ -174,10 +175,31 @@ public class Main {
 		String fn = br.readLine();
 		System.out.print("名 > ");
 		String ln = br.readLine();
-		System.out.print("性別 > ");
-		int s = Integer.parseInt( br.readLine() );
-		System.out.print("生年月日 > ");
-		LocalDate bd = LocalDate.parse(br.readLine(), DateTimeFormatter.ofPattern("yyyy/MM/dd"));
+		int s;
+		while(true) {
+			System.out.print("性別 > ");
+			try {
+				s = Integer.parseInt( br.readLine() );
+				if(s==1 || s==2) {
+					break;
+				}
+				else {
+					System.out.println("Please enter the \"1\" or \"2\" ");
+				}
+			} catch(NumberFormatException e) {
+				System.out.println("Please enter the \\\"1\\\" or \\\"2\\\" ");
+			}
+		}
+		LocalDate bd;
+		while(true) {
+			try {
+				System.out.print("生年月日 > ");
+				bd = LocalDate.parse(br.readLine(), DateTimeFormatter.ofPattern("yyyy/MM/dd"));
+				break;
+			}catch(DateTimeParseException e){
+				System.out.println("Please set a exactly number");
+			}
+		}
 		System.out.print("郵便番号 > ");
 		String ps = br.readLine();
 		System.out.print("都道府県 > ");
