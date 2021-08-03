@@ -5,8 +5,7 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
 
-import readfile.ReadFile;
-import writefile.WriteFile;
+import readwritefile.ReadWriteFile;
 
 
 interface Management{
@@ -187,7 +186,7 @@ public class Main {
 					System.out.println("Please enter the \"1\" or \"2\" ");
 				}
 			} catch(NumberFormatException e) {
-				System.out.println("Please enter the \\\"1\\\" or \\\"2\\\" ");
+				System.err.println("Please enter the \"1\" or \"2\" ");
 			}
 		}
 		LocalDate bd;
@@ -197,7 +196,7 @@ public class Main {
 				bd = LocalDate.parse(br.readLine(), DateTimeFormatter.ofPattern("yyyy/MM/dd"));
 				break;
 			}catch(DateTimeParseException e){
-				System.out.println("Please set a exactly number");
+				System.err.println("Please set a exactly number");
 			}
 		}
 		System.out.print("郵便番号 > ");
@@ -222,8 +221,8 @@ public class Main {
 		Management m = new Manager(num, p1, a1, tel, mail);
 		m.manage();
 		
-		ReadFile.readFile("C:/Users/hoge/Desktop/index.php");
-		WriteFile.writeFile("C:/Users/hoge/Desktop/test.txt");
+		ReadWriteFile.readWriteFile("D:/a1.txt", "D:/a2.txt");
+		
 	}
 	    
 }
