@@ -10,10 +10,10 @@ import java.io.IOException;
 
 public class ReadWriteFile2
 {
-	public static void readWriteFile(String rf, String wf) {
+	public static void readWriteFile(String num, String work, String time) {
 		try {
-			File rfile = new File(rf);
-			File wfile = new File(wf);
+			File rfile = new File("D:/a1.txt");
+			File wfile = new File("");
 			BufferedReader br = new BufferedReader(new FileReader(rfile));
 			BufferedWriter bw = new BufferedWriter(new FileWriter(wfile));
 			String text;
