@@ -5,7 +5,7 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
 
-import readwritefile.ReadWriteFile;
+import filteringdata.FilteringData;
 
 
 interface Management{
@@ -223,7 +223,7 @@ public class Main {
 		Management m = new Manager(num, p1, a1, tel, mail);
 		m.manage();
 		
-		ReadWriteFile.readWriteFile("D:/a1.txt", "D:/a2.txt");
+		FilteringData.filteringData();
 		
 	}
 	    
