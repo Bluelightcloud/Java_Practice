@@ -116,6 +116,7 @@ class Employee
 		mail = m;
 	}
 	
+	//Setter
 	public void SetAll(Employee e) {
 		epnum = e.epnum;
 		person = e.person;
@@ -144,6 +145,7 @@ class Employee
 		mail = m;
 	}
 	
+	//show
 	public void ShowData() {
 		System.out.println("社員情報");
 		System.out.println(epnum);
