@@ -6,6 +6,7 @@ import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
 
 import filteringdata.FilteringData;
+import finddata.FindData;
 
 
 interface Management{
@@ -224,6 +225,7 @@ public class Main {
 		m.manage();
 		
 		FilteringData.filteringData();
+		FindData.findData();
 		
 	}
 	    
